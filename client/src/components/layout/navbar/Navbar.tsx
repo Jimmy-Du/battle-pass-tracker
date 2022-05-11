@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='brand-title'>
-        Battlepass Tracker
+        Battle Pass Tracker
       </div>
       <div className='navbar-links'>
         <ul>

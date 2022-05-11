@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  min-height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: bisque;
+}
+
+.brand-title {
+  font-size: large;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  margin-left: 1rem;
+}

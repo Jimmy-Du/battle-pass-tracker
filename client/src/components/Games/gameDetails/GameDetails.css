@@ -1,0 +1,18 @@
+.game-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0 0 0;
+}
+
+.game-details span {
+  padding: 5px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=GameDetails.css.map */

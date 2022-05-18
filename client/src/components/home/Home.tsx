@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Game from '../../interfaces/game.interface'
-import Games from '../games/Games'
+import Games from '../Games/Games'
 import './Home.css'
 
 const Home: React.FC = () => {

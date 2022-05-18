@@ -1,0 +1,15 @@
+.game {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 10px 0 0 0;
+}
+
+.game span {
+  padding: 5px;
+  flex-basis: 100%;
+}
+
+.game span:not(:first-child) {
+  border-left: 1px solid black;
+}

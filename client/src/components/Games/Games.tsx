@@ -2,6 +2,7 @@ import React from 'react'
 import GameInterface from '../../interfaces/game.interface'
 import GameDetails from './gameDetails/GameDetails'
 import Game from './game/Game'
+import './Games.css'
 
 interface GamesProps {
   games: GameInterface[]

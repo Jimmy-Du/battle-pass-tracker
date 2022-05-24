@@ -5,8 +5,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid black;
-  margin: 10px 0 0 0;
+  border: 1px solid #656d78;
+  border-top: 0;
+  color: #3b4046;
+  background-color: #fff;
+  margin: 0 0 0 0;
 }
 
 .game span {
@@ -16,6 +19,27 @@
 }
 
 .game span:not(:first-child) {
-  border-left: 1px solid black;
+  border-left: 1px solid #656d78;
+}
+
+@media (max-width: 680px) {
+  .game {
+    font-size: 0.95em;
+  }
+  .game-start-date {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .game {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 3840px) {
+  .game {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=Game.css.map */

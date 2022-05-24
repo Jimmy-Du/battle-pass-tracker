@@ -1,10 +1,12 @@
+@import '../../../styles/Variables.scss';
+
 .navbar {
   width: 100%;
   min-height: 5vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: bisque;
+  background-color: $primary-color;
 }
 
 .brand-title {
@@ -16,8 +18,30 @@
   display: flex;
   margin: 0;
   padding: 0;
+  font-size: large;
 }
 
 .navbar-links a {
   margin-left: 1rem;
+  color: $link-color;
+}
+
+@media (min-width: 2560px) {
+  .navbar-links ul {
+    font-size: $font-size-2k;
+  }
+
+  .brand-title {
+    font-size: $font-size-2k;
+  }
+}
+
+@media (min-width: 3840px) {
+  .navbar-links ul {
+    font-size: $font-size-4k;
+  }
+
+  .brand-title {
+    font-size: $font-size-4k;
+  }
 }

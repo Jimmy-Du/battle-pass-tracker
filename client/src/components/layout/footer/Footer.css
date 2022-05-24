@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  background-color: bisque;
+  background-color: #5689dc;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,5 +15,17 @@ footer {
 
 footer p {
   font-size: large;
+}
+
+@media (min-width: 2560px) {
+  footer p {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 3840px) {
+  footer p {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

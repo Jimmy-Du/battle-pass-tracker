@@ -1,6 +1,8 @@
+@import '../../../styles/Variables.scss';
+
 footer {
   width: 100%;
-  background-color: bisque;
+  background-color: $primary-color;
   height: 5vh;
   display: flex;
   justify-content: center;
@@ -9,4 +11,16 @@ footer {
 
 footer p {
   font-size: large;
+}
+
+@media (min-width: 2560px) {
+  footer p {
+    font-size: $font-size-2k;
+  }
+}
+
+@media (min-width: 3840px) {
+  footer p {
+    font-size: $font-size-4k;
+  }
 }

@@ -23,6 +23,7 @@ const Home: React.FC = () => {
 
   return (
     <div className='home'>
+      <h1>Battle Passes</h1>
       { games ? <Games games={games}/> : null }
     </div>
   )

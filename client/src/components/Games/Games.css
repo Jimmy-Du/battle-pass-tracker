@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=Games.css.map */
+.games {
+  width: 80%;
+  margin: 20px 0 20px 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-shadow: 0 0 5px 1px #656d78;
+          box-shadow: 0 0 5px 1px #656d78;
+}
+
+@media (max-width: 680px) {
+  .games {
+    width: 95%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .games {
+    width: 75%;
+  }
+}
+/*# sourceMappingURL=Games.css.map */

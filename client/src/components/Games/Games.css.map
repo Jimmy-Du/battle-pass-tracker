@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,aAAa;EACrB,MAAM,EAAE,WAAW;EACnB,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,GAAG,CCHV,OAAO;CDIrB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,MAAM,CAAC;IACL,KAAK,EAAE,GAAG;GACX;;;AAGH,MAAM,EAAE,SAAS,EAAE,MAAM;EACvB,AAAA,MAAM,CAAC;IACL,KAAK,EAAE,GAAG;GACX",
     "sources": [
-        "Games.scss"
+        "Games.scss",
+        "../../styles/Variables.scss"
     ],
     "names": [],
     "file": "Games.css"

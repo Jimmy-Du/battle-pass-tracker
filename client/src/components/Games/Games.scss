@@ -1,0 +1,21 @@
+@import '../../styles/Variables.scss';
+
+.games {
+  width: 80%;
+  margin: 20px 0 20px 0;
+  height: fit-content;
+  align-self: center;
+  box-shadow: 0 0 5px 1px $shadow-color;
+}
+
+@media (max-width: 680px) {
+  .games {
+    width: 95%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .games {
+    width: 75%;
+  }
+}

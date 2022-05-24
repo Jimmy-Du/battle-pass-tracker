@@ -4,11 +4,11 @@ import './GameDetails.css'
 const GameDetails = () => {
   return (
     <div className='game-details'>
-      <span>Game:</span>
-      <span>Season:</span>
-      <span>Start:</span>
-      <span>End:</span>
-      <span>Days Remaining:</span>
+      <span className='game-detail'>Game</span>
+      <span className='season-detail'>Season</span>
+      <span className='start-detail'>Start</span>
+      <span className='end-detail'>End</span>
+      <span className='days-detail'>Days Left</span>
     </div>
   )
 }

@@ -5,14 +5,36 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 0 0 0;
+  border: 1px solid #656d78;
+  background-color: #fff;
 }
 
 .game-details span {
   padding: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  color: #3b4046;
   font-weight: bold;
-  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .game-details {
+    font-size: 0.95em;
+  }
+  .start-detail {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .game-details {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 3840px) {
+  .game-details {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=GameDetails.css.map */

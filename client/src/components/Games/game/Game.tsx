@@ -18,7 +18,7 @@ const Game: React.FC<GameProps> = ({ game }) => {
     const differenceInTime: number = endDate.getTime() - startDate.getTime()
     const daysBetween: number = differenceInTime / (1000 * 3600 * 24)
 
-    return Math.floor(daysBetween)
+    return Math.ceil(daysBetween)
   }
 
   return (

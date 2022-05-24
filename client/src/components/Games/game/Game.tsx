@@ -23,23 +23,23 @@ const Game: React.FC<GameProps> = ({ game }) => {
 
   return (
     <div className='game'>
-      <span>
+      <span className='game-title'>
         <p>{ game.title }</p>
       </span>
-      <span>
+      <span className='game-season'>
         <p>{ game.season_title }</p>
       </span>
-      <span>
+      <span className='game-start-date'>
         <p>
           { new Date(game.season_start_date).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' }) }
         </p>
       </span>
-      <span>
+      <span className='game-end-date'>
         <p>
           { new Date(game.season_end_date).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' }) }
         </p>
       </span>
-      <span>
+      <span className='game-days-left'>
         <p>{ calculateDaysLeft() }</p>
       </span>
     </div>

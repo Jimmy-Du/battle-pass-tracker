@@ -9,7 +9,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: bisque;
+  background-color: #5689dc;
 }
 
 .brand-title {
@@ -23,9 +23,29 @@
   display: flex;
   margin: 0;
   padding: 0;
+  font-size: large;
 }
 
 .navbar-links a {
   margin-left: 1rem;
+  color: #fde047;
+}
+
+@media (min-width: 2560px) {
+  .navbar-links ul {
+    font-size: 1.6em;
+  }
+  .brand-title {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 3840px) {
+  .navbar-links ul {
+    font-size: 2em;
+  }
+  .brand-title {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */

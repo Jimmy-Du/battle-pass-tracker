@@ -13,7 +13,7 @@ const Games: React.FC<GamesProps> = ({ games }) => {
     <div className='games'>
       <GameDetails />
       { games.map( game => {
-        return <Game game={game} />
+        return <Game game={ game } key={ game.id }/>
       }) }
     </div>
   )

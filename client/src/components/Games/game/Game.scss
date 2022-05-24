@@ -1,8 +1,13 @@
+@import '../../../styles/Variables.scss';
+
 .game {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
-  margin: 10px 0 0 0;
+  border: 1px solid $border-color;
+  border-top: 0;
+  color: $font-color;
+  background-color: $game-color;
+  margin: 0 0 0 0;
 }
 
 .game span {
@@ -11,5 +16,27 @@
 }
 
 .game span:not(:first-child) {
-  border-left: 1px solid black;
+  border-left: 1px solid $border-color;
+}
+
+@media (max-width: 680px) {
+  .game {
+    font-size: $font-size-mobile;
+  }
+
+  .game-start-date {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .game {
+    font-size: $font-size-2k;
+  }
+}
+
+@media (min-width: 3840px) {
+  .game {
+    font-size: $font-size-4k;
+  }
 }

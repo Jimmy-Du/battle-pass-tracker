@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   // Parameters:  N/A
   // Return:      N/A
   const getGames = async () => {
-    const response = await axios.post<Game[]>('http://localhost:5000/games', {games: []})
+    const response = await axios.post<Game[]>(`${process.env.REACT_APP_BASE_API_URL}/games`, {games: []})
     setGames(response.data)
   }
 

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Game from '../../interfaces/game.interface'
-import Games from '../Games/Games'
+import Games from '../games/Games'
+import Spinner from '../common/spinner/Spinner'
 import './Home.css'
 
 const Home: React.FC = () => {
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
   return (
     <div className='home'>
       <h1>Battle Passes</h1>
-      { games ? <Games games={games}/> : null }
+      { games ? <Games games={ games }/> : <Spinner /> }
     </div>
   )
 }

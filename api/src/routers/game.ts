@@ -29,4 +29,19 @@ router.post('/games', async (req: Request, res: Response, next: NextFunction) =>
 
 
 
+// Route:       GET /games
+// Description: Gets all game titles
+// Access:      Public
+router.get('/games', async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const games: QueryResult = await pool.query("SELECT id, title FROM game")
+    res.status(200).send(games.rows)
+  }
+  catch {
+    res.status(500).send({error: "Something went wrong"})
+  }
+})
+
+
+
 export default router

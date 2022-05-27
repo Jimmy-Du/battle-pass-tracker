@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,qBAAqB,CAAC;EACpB,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "SelectGames.scss",
+        "../../styles/Variables.scss"
+    ],
+    "names": [],
+    "file": "SelectGames.css"
+}

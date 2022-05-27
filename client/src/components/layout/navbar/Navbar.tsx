@@ -11,6 +11,7 @@ const Navbar = () => {
       <div className='navbar-links'>
         <ul>
           <li><Link to='/'>Home</Link></li>
+          <li><Link to='/select-games'>Select Games</Link></li>
         </ul>
       </div>
     </nav>

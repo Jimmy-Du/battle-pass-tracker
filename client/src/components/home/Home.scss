@@ -8,21 +8,3 @@
   background-color: $secondary-color;
   margin: 0;
 }
-
-.home h1 {
-  margin: 10px 0 0 0;
-  color: $font-color;
-  text-decoration: underline;
-}
-
-@media (min-width: 2560px) {
-  .home h1 {
-    font-size: $font-size-h1-2k;
-  }
-}
-
-@media (min-width: 3840px) {
-  .home h1 {
-    font-size: $font-size-h1-4k;
-  }
-}

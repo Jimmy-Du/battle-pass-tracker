@@ -12,22 +12,4 @@
   background-color: #e9a197;
   margin: 0;
 }
-
-.home h1 {
-  margin: 10px 0 0 0;
-  color: #3b4046;
-  text-decoration: underline;
-}
-
-@media (min-width: 2560px) {
-  .home h1 {
-    font-size: 3em;
-  }
-}
-
-@media (min-width: 3840px) {
-  .home h1 {
-    font-size: 3.5em;
-  }
-}
 /*# sourceMappingURL=Home.css.map */

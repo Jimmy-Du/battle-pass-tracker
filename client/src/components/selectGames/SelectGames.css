@@ -10,12 +10,6 @@
   background-color: #e9a197;
 }
 
-.select-games-wrapper h1 {
-  margin: 10px 0 0 0;
-  color: #3b4046;
-  text-decoration: underline;
-}
-
 .select-games {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,17 +60,8 @@
 }
 
 @media (min-width: 2560px) {
-  .select-games-wrapper h1 {
-    font-size: 3em;
-  }
   .select-games {
     width: 30%;
-  }
-}
-
-@media (min-width: 3840px) {
-  .select-games-wrapper h1 {
-    font-size: 3.5em;
   }
 }
 /*# sourceMappingURL=SelectGames.css.map */

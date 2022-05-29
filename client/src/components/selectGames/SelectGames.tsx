@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import GameInterface from '../../interfaces/game.interface'
 import SelectGame from './selectGame/SelectGame'
+import Header from '../common/header/Header'
 import './SelectGames.css'
 
 const SelectGames: React.FC = () => {
@@ -78,7 +79,7 @@ const SelectGames: React.FC = () => {
   
   return (
     <div className='select-games-wrapper'>
-      <h1>Game Selection</h1>
+      <Header text='Game Selection' />
       <div className='select-games'>
         { games ? 
           games.map(game => <SelectGame key={ game.id } 

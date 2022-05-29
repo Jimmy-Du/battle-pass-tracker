@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import GameInterface from '../../../interfaces/game.interface'
 import './SelectGame.css'
 

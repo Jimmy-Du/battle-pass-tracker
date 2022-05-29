@@ -1,5 +1,71 @@
 @import '../../styles/Variables.scss';
 
 .select-games-wrapper {
+  display: flex;
+  flex-direction: column;
   min-height: 90vh;
+  background-color: $secondary-color;
+}
+
+.select-games-wrapper h1 {
+  margin: 10px 0 0 0;
+  color: $font-color;
+  text-decoration: underline;
+}
+
+.select-games {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 25%;
+  max-height: 50%;
+  padding: 15px;
+  margin: 20px 0 0 0;
+
+  border: 1px solid $border-color;
+  background-color: white;
+  box-shadow: 0 0 5px 1px $shadow-color;
+}
+
+.select-games button {
+  background-color: $confirm-color;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px $shadow-color;
+  color: $font-color;
+  font-size: 1em;
+}
+
+.select-games button:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+@media (max-width: 680px) {
+  .select-games {
+    width: 85%;
+  }
+}
+
+@media (min-width: 680px) and (max-width: 820px) {
+  .select-games {
+    width: 60%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .select-games-wrapper h1 {
+    font-size: $font-size-h1-2k;
+  }
+
+  .select-games {
+    width: 30%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .select-games-wrapper h1 {
+    font-size: $font-size-h1-4k;
+  }
 }

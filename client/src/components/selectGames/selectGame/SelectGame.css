@@ -1,0 +1,40 @@
+.select-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #656d78;
+  background-color: white;
+  -webkit-box-shadow: 0 0 5px 1px #656d78;
+          box-shadow: 0 0 5px 1px #656d78;
+  padding: 10px;
+  margin: 0px 0 20px 0;
+  color: #3b4046;
+}
+
+.select-game input {
+  display: inline;
+}
+
+@media (min-width: 2560px) {
+  .select-games {
+    font-size: 2em;
+  }
+  .select-game input[type=checkbox] {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@media (min-width: 3840px) {
+  .select-game {
+    font-size: 1.3em;
+  }
+  .select-game input[type=checkbox] {
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+  }
+}
+/*# sourceMappingURL=SelectGame.css.map */

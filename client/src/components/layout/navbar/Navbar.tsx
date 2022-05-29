@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -10,8 +10,21 @@ const Navbar = () => {
       </div>
       <div className='navbar-links'>
         <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/select-games'>Select Games</Link></li>
+          <li>
+            <NavLink 
+              to='/' 
+              className={({isActive}) => isActive ? 'active-link' : 'link'}>
+                Home
+            </NavLink>
+            </li>
+          <li>
+            <NavLink 
+              to='/select-games' 
+              className={({isActive}) => isActive ? 'active-link' : 'link'}
+            >
+              Select Games
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

@@ -1,0 +1,36 @@
+@import '../../../styles/Variables.scss';
+
+.select-game {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $border-color;
+  background-color: white;
+  box-shadow: 0 0 5px 1px $shadow-color;
+  padding: 10px;
+  margin: 0px 0 20px 0;
+  color: $font-color;
+}
+
+.select-game input {
+  display: inline;
+}
+
+@media (min-width: 2560px) {
+  .select-games {
+    font-size: 2em;
+  }
+
+  .select-game input[type=checkbox] {
+    transform: scale(1.5);
+  }
+}
+
+@media (min-width: 3840px) {
+  .select-game {
+    font-size: 1.3em;
+  }
+
+  .select-game input[type=checkbox] {
+    transform: scale(1.7);
+  }
+}

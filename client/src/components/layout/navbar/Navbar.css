@@ -26,9 +26,20 @@
   font-size: large;
 }
 
-.navbar-links a {
+.link {
   margin-left: 1rem;
   color: #fde047;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.active-link {
+  margin-left: 1rem;
+  color: #fde047;
+  text-decoration: underline;
 }
 
 @media (min-width: 2560px) {

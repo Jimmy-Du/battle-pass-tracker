@@ -1,5 +1,6 @@
 import React from 'react'
 import GameInterface from '../../../interfaces/game.interface'
+import './SelectGame.css'
 
 interface SelectGameProps {
   game: GameInterface

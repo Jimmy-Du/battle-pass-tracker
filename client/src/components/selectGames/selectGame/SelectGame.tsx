@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import GameInterface from '../../../interfaces/game.interface'
 import './SelectGame.css'
 
@@ -10,9 +10,12 @@ interface SelectGameProps {
 
 const SelectGame: React.FC<SelectGameProps> = ({ game, onChangeHandler, selected }) => {
   return (
-    <div className='select-game'>
+    <div className='select-game' onClick={() => onChangeHandler(game.id)}>
       <label>{ game.title }</label>
-      <input type='checkbox' onChange={() => onChangeHandler(game.id)} checked={selected}/>
+      <input 
+        type='checkbox'
+        onChange={() => onChangeHandler(game.id)} 
+        checked={selected}/>
     </div>
   )
 }

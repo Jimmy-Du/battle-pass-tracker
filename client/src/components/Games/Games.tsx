@@ -5,6 +5,7 @@ import GameDetails from './gameDetails/GameDetails'
 import Game from './game/Game'
 import Spinner from '../common/spinner/Spinner'
 import './Games.css'
+import Header from '../common/header/Header'
 
 const Games: React.FC = () => {
   const [games, setGames] = useState<GameInterface[]>()
@@ -38,6 +39,7 @@ const Games: React.FC = () => {
 
   return (
     <div className='games-wrapper'>
+      <Header text='Battle Passes' />
       <div className='games'>
         { games ? <GameDetails /> : <Spinner /> }
         { games ? games.map(game => <Game game={ game } key={ game.id } />) : null }

@@ -18,6 +18,12 @@
   display: inline;
 }
 
+.select-game:hover {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  cursor: pointer;
+}
+
 @media (min-width: 2560px) {
   .select-games {
     font-size: 2em;

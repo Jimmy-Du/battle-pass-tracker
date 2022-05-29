@@ -1,5 +1,14 @@
 @import '../../styles/Variables.scss';
 
+.games-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 90vh;
+  background-color: $secondary-color;
+  margin: 0;
+}
+
 .games {
   width: 80%;
   margin: 20px 0 20px 0;

@@ -1,0 +1,18 @@
+h1 {
+  margin: 10px 0 0 0;
+  color: #3b4046;
+  text-decoration: underline;
+}
+
+@media (min-width: 2560px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 3840px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+/*# sourceMappingURL=Header.css.map */

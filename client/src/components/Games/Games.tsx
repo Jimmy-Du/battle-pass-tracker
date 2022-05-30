@@ -36,6 +36,37 @@ const Games: React.FC = () => {
 
 
 
+  // Function:    sortGames()
+  // Description: called upon when the user clicks on each span of game details,
+  //              will then sort the displayed games based on the span clicked on
+  // Parameters:  sortType: a string indicating which game property the list of games
+  //              will be sorted by
+  // Return:      N/A
+  const sortGames = (sortType: string) => {
+    switch (sortType) {
+      // sorts alphabetically based on the title of the game
+      case 'game':
+        setGames([...games!].sort((a, b) => a.title.localeCompare(b.title)))
+        break;
+      // sorts alphabetically based on the title of the season
+      case 'season':
+        setGames([...games!].sort((a, b) => a.season_title.localeCompare(b.season_title)))
+        break;
+      // sorts based on which season started first
+      case 'start':
+        setGames([...games!].sort((a, b) => new Date(a.season_start_date).getTime() - new Date(b.season_start_date).getTime()))
+        break;
+      // sorts based on which season ends first
+      case 'end':
+        setGames([...games!].sort((a, b) => new Date(a.season_end_date).getTime() - new Date(b.season_end_date).getTime()))
+        break;
+      default:
+        break;
+    }
+  }
+
+
+
   // useEffect to make request to database to retrieve games when component is mounted
   useEffect(() => {
     getGames()
@@ -45,7 +76,7 @@ const Games: React.FC = () => {
     <div className='games-wrapper'>
       <Header text='Battle Passes' />
       <div className='games'>
-        { games ? <GameDetails /> : error ? <p>{ error }</p> : <Spinner /> }
+        { games ? <GameDetails sortFunction={ sortGames } /> : error ? <p>{ error }</p> : <Spinner /> }
         { games ? games.map(game => <Game game={ game } key={ game.id } />) : null }
       </div>
     </div>

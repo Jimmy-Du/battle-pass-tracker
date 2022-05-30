@@ -14,6 +14,10 @@
   font-weight: bold;
 }
 
+.current-sort {
+  text-decoration: underline;
+}
+
 @media (max-width: 680px) {
   .game-details {
     font-size: $font-size-mobile;

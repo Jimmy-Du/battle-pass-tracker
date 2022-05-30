@@ -5,10 +5,12 @@ import GameInterface from '../../interfaces/game.interface'
 import SelectGame from './selectGame/SelectGame'
 import Header from '../common/header/Header'
 import './SelectGames.css'
+import Spinner from '../common/spinner/Spinner'
 
 const SelectGames: React.FC = () => {
   const [games, setGames] = useState<GameInterface[]>()
   const [selectedGames, setSelectedGames] = useState<Number[]>([])
+  const [error, setError] = useState<String>('')
 
   const navigate = useNavigate()
 
@@ -19,8 +21,13 @@ const SelectGames: React.FC = () => {
   // Parameters:  N/A
   // Return:      N/A
   const getGames = async () => {
-    const response = await axios.get<GameInterface[]>(`${process.env.REACT_APP_BASE_API_URL}/games`)
-    setGames(response.data)
+    try {
+      const response = await axios.get<GameInterface[]>(`${process.env.REACT_APP_BASE_API_URL}/games`)
+      setGames(response.data)
+    }
+    catch (e: any) {
+      setError('Something went wrong. Please try again.')
+    }
   }
 
 
@@ -86,7 +93,8 @@ const SelectGames: React.FC = () => {
                                         game={ game } 
                                         selected={ selectedGames.includes(game.id) }
                                         onChangeHandler={selectGameHandler}/>) : 
-          null }
+          error ? <p>{ error }</p> : <Spinner /> 
+        }
           <button onClick={saveSelectedGamesHandler}>Save Selection</button>
       </div>
     </div>

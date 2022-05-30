@@ -9,6 +9,7 @@ import Header from '../common/header/Header'
 
 const Games: React.FC = () => {
   const [games, setGames] = useState<GameInterface[]>()
+  const [error, setError] = useState<String>('')
 
 
 
@@ -24,8 +25,13 @@ const Games: React.FC = () => {
       selectedGames = JSON.parse(localStorage.getItem(process.env.REACT_APP_LOCAL_STORAGE!)!)
     }
 
-    const response = await axios.post<GameInterface[]>(`${process.env.REACT_APP_BASE_API_URL}/games`, {games: selectedGames})
-    setGames(response.data)
+    try {
+      const response = await axios.post<GameInterface[]>(`${process.env.REACT_APP_BASE_API_URL}/games`, {games: selectedGames})
+      setGames(response.data)
+    }
+    catch (e: any) {
+      setError('Something went wrong. Please try again.')
+    }
   }
 
 
@@ -35,13 +41,11 @@ const Games: React.FC = () => {
     getGames()
   }, [])
 
-
-
   return (
     <div className='games-wrapper'>
       <Header text='Battle Passes' />
       <div className='games'>
-        { games ? <GameDetails /> : <Spinner /> }
+        { games ? <GameDetails /> : error ? <p>{ error }</p> : <Spinner /> }
         { games ? games.map(game => <Game game={ game } key={ game.id } />) : null }
       </div>
     </div>

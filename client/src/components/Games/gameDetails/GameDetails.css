@@ -17,6 +17,10 @@
   font-weight: bold;
 }
 
+.game-details span:hover {
+  cursor: pointer;
+}
+
 .current-sort {
   text-decoration: underline;
 }

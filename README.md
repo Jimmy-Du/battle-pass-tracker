@@ -14,3 +14,6 @@ Click [here](https://battlepasstracker.netlify.app/) for a live preview of the a
 - PostgreSQL
 - React
 - TypeScript
+
+## Android
+For the android version/repository click [here.](https://github.com/Jimmy-Du/battle-pass-tracker-android)

@@ -21,9 +21,8 @@
   -ms-flex-item-align: center;
       align-self: center;
   width: 25%;
-  max-height: 50%;
   padding: 15px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
   border: 1px solid #656d78;
   background-color: white;
   -webkit-box-shadow: 0 0 5px 1px #656d78;

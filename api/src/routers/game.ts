@@ -6,8 +6,8 @@ const router: Application = express()
 
 
 // Route:       POST /games
-// Description: Gets all games with battle passes if no games are specified
-//              or the specified games if games are specified
+// Description: Gets all battle passes of games if no games are specified.
+//              If games are specified only the battle passes of the games specified are returned.
 // Access:      Public
 router.post('/games', async (req: Request, res: Response, next: NextFunction) => {
   try {

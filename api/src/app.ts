@@ -1,5 +1,6 @@
 import express from 'express'
 import gameRoute from './routers/game'
+import eventRoute from './routers/event'
 const cors = require('cors')
 require('dotenv').config()
 
@@ -18,6 +19,7 @@ app.use(cors({
 
 // Setup routes
 app.use(gameRoute)
+app.use(eventRoute)
 
 
 

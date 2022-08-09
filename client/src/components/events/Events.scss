@@ -1,0 +1,30 @@
+@import '../../styles/Variables.scss';
+
+.events-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 90vh;
+  background-color: $secondary-color;
+  margin: 0;
+}
+
+.events {
+  width: 80%;
+  margin: 20px 0 20px 0;
+  height: fit-content;
+  align-self: center;
+  box-shadow: 0 0 5px 1px $shadow-color;
+}
+
+@media (max-width: 680px) {
+  .events {
+    width: 95%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .events {
+    width: 75%;
+  }
+}

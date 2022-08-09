@@ -1,0 +1,45 @@
+@import '../../../styles/Variables.scss';
+
+.event-details {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $border-color;
+  background-color: #fff;
+}
+
+.event-details span {
+  padding: 5px;
+  flex-basis: 100%;
+  color: $font-color;
+  font-weight: bold;
+}
+
+.event-details span:hover {
+  cursor: pointer;
+}
+
+.current-sort {
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .event-details {
+    font-size: $font-size-mobile;
+  }
+
+  .start-detail {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .event-details {
+    font-size: $font-size-2k;
+  }
+}
+
+@media (min-width: 3840px) {
+  .event-details {
+    font-size: $font-size-4k;
+  }
+}

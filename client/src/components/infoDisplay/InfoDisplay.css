@@ -22,6 +22,18 @@
   border-left: 1px solid #656d78;
 }
 
+.days-left-high {
+  background-color: #86EFAC;
+}
+
+.days-left-medium {
+  background-color: #FDE047;
+}
+
+.days-left-low {
+  background-color: #FCA5A5;
+}
+
 @media (max-width: 680px) {
   .info-display {
     font-size: 0.95em;

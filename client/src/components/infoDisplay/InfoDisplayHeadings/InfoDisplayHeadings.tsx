@@ -18,13 +18,17 @@ interface InfoDisplayHeadingsProps {
 const setCurrentSort = (e: any) => {
   const infoDetailHeadings = e.target.parentNode.children
 
-  // for loop to remove the 'current-sort' class from all game detail headings
-  for (let i = 0; i < infoDetailHeadings.length; i++) {
-   infoDetailHeadings[i].classList.remove('current-sort')
+  // if the clicked element is not the container for all headings, 
+  // the clicked on heading will be underlined
+  if (!e.target.classList.contains('info-display-headings')) {
+    // for loop to remove the 'current-sort' class from all game detail headings
+    for (let i = 0; i < infoDetailHeadings.length; i++) {
+      infoDetailHeadings[i].classList.remove('current-sort')
+    }
+  
+    // applies the 'current-sort' class to the heading that was just clicked
+    e.target.classList.add('current-sort') 
   }
-
-  // applies the 'current-sort' class to the heading that was just clicked
-  e.target.classList.add('current-sort')
 }
 
 

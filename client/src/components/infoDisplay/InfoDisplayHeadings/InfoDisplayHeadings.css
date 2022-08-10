@@ -1,0 +1,48 @@
+.info-display-headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #656d78;
+  background-color: #fff;
+}
+
+.info-display-headings span {
+  padding: 5px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  color: #3b4046;
+  font-weight: bold;
+}
+
+.info-display-headings span:hover {
+  cursor: pointer;
+}
+
+.current-sort {
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .info-display-headings {
+    font-size: 0.95em;
+  }
+  .start-date-heading {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .info-display-headings {
+    font-size: 1.6em;
+  }
+}
+
+@media (min-width: 3840px) {
+  .info-display-headings {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=InfoDisplayHeadings.css.map */

@@ -1,0 +1,45 @@
+@import '../../../styles/Variables.scss';
+
+.info-display-headings {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $border-color;
+  background-color: #fff;
+}
+
+.info-display-headings span {
+  padding: 5px;
+  flex-basis: 100%;
+  color: $font-color;
+  font-weight: bold;
+}
+
+.info-display-headings span:hover {
+  cursor: pointer;
+}
+
+.current-sort {
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .info-display-headings {
+    font-size: $font-size-mobile;
+  }
+
+  .start-date-heading {
+    display: none;
+  }
+}
+
+@media (min-width: 2560px) {
+  .info-display-headings {
+    font-size: $font-size-2k;
+  }
+}
+
+@media (min-width: 3840px) {
+  .info-display-headings {
+    font-size: $font-size-4k;
+  }
+}

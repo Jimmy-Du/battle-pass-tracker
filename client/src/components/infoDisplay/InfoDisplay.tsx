@@ -9,18 +9,32 @@ interface InfoDisplayProps {
 }
 
 const InfoDisplay: React.FC<InfoDisplayProps> = ({ mainTitle, subTitle, startDate, endDate }) => {
-  // Function:    calculateDaysLeft()
-  // Description: calculates the number of days remaining for the game's battle pass
-  // Parameters:  N/A
-  // Return:      the number of days remaining for the battle pass
-  const calculateDaysLeft = (): number => {
-    const differenceInTime: number = new Date(endDate).getTime() - new Date().getTime()
-    const daysBetween: number = differenceInTime / (1000 * 3600 * 24)
+  const daysLeftDifferenceInTime: number = new Date(endDate).getTime() - new Date().getTime()
+  const daysLeft: number = Math.ceil(daysLeftDifferenceInTime / (1000 * 3600 * 24))
 
-    return Math.ceil(daysBetween)
+  const totalDurationInTime: number = new Date(endDate).getTime() - new Date(startDate).getTime()
+  const totalDuration: number = Math.ceil(totalDurationInTime / (1000 * 3600 * 24))
+
+  const assignDaysLeftClass = (): string => {
+    let daysLeftClass: string = ''
+
+    // if the amount of remaining days is above half the total duration,
+    // the days-left-high css class is assigned
+    if (daysLeft > totalDuration / 2) {
+      daysLeftClass = 'days-left-high'
+    }
+    // if the amount of remaining days is lower than or equal to a quarter of 
+    // the total duration, the days-left-low css class is assigned
+    else if (daysLeft <= totalDuration / 4) {
+      daysLeftClass = 'days-left-low'
+    }
+    // else, the days-left-medium css class is assigned
+    else {
+      daysLeftClass = 'days-left-medium'
+    }
+
+    return daysLeftClass
   }
-
-
 
   return (
     <div className='info-display'>
@@ -40,8 +54,8 @@ const InfoDisplay: React.FC<InfoDisplayProps> = ({ mainTitle, subTitle, startDat
           { new Date(endDate).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' }) }
         </p>
       </span>
-      <span className='days-left'>
-        <p>{ calculateDaysLeft() }</p>
+      <span className={ assignDaysLeftClass() }>
+        <p>{ daysLeft }</p>
       </span>
     </div>
   )

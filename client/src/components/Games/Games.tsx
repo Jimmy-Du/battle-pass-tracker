@@ -84,6 +84,7 @@ const Games: React.FC = () => {
         { games ? 
                   games.map(game => 
                                     <InfoDisplay 
+                                      key={game.id}
                                       mainTitle={game.title} 
                                       subTitle={game.season_title} 
                                       startDate={game.season_start_date}

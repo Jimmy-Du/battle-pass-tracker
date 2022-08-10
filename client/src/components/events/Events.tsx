@@ -82,6 +82,7 @@ const Events: React.FC = () => {
       { events ? 
                   events.map(event => 
                                       <InfoDisplay 
+                                        key={event.id}
                                         mainTitle={event.event_title}
                                         subTitle={event.title}
                                         startDate={event.event_start_date}

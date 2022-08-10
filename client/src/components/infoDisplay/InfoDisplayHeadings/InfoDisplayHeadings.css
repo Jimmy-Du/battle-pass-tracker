@@ -1,4 +1,4 @@
-.event-details {
+.info-display-headings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +9,7 @@
   background-color: #fff;
 }
 
-.event-details span {
+.info-display-headings span {
   padding: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -17,7 +17,7 @@
   font-weight: bold;
 }
 
-.event-details span:hover {
+.info-display-headings span:hover {
   cursor: pointer;
 }
 
@@ -26,23 +26,23 @@
 }
 
 @media (max-width: 680px) {
-  .event-details {
+  .info-display-headings {
     font-size: 0.95em;
   }
-  .start-detail {
+  .start-date-heading {
     display: none;
   }
 }
 
 @media (min-width: 2560px) {
-  .event-details {
+  .info-display-headings {
     font-size: 1.6em;
   }
 }
 
 @media (min-width: 3840px) {
-  .event-details {
+  .info-display-headings {
     font-size: 2em;
   }
 }
-/*# sourceMappingURL=EventDetails.css.map */
+/*# sourceMappingURL=InfoDisplayHeadings.css.map */

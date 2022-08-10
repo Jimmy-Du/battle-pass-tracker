@@ -1,4 +1,4 @@
-.game-details {
+.info-display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,43 +6,40 @@
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid #656d78;
+  border-top: 0;
+  color: #3b4046;
   background-color: #fff;
+  margin: 0 0 0 0;
 }
 
-.game-details span {
+.info-display span {
   padding: 5px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  color: #3b4046;
-  font-weight: bold;
 }
 
-.game-details span:hover {
-  cursor: pointer;
-}
-
-.current-sort {
-  text-decoration: underline;
+.info-display span:not(:first-child) {
+  border-left: 1px solid #656d78;
 }
 
 @media (max-width: 680px) {
-  .game-details {
+  .info-display {
     font-size: 0.95em;
   }
-  .start-detail {
+  .start-date {
     display: none;
   }
 }
 
 @media (min-width: 2560px) {
-  .game-details {
+  .info-display {
     font-size: 1.6em;
   }
 }
 
 @media (min-width: 3840px) {
-  .game-details {
+  .info-display {
     font-size: 2em;
   }
 }
-/*# sourceMappingURL=GameDetails.css.map */
+/*# sourceMappingURL=InfoDisplay.css.map */

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import EventInterface from '../../interfaces/event.interface'
-import Event from './event/Event'
 import Header from '../common/header/Header'
-import EventDetails from './eventDetails/EventDetails'
 import Spinner from '../common/spinner/Spinner'
+import InfoDisplay from '../infoDisplay/InfoDisplay'
+import InfoDisplayHeadings from '../infoDisplay/InfoDisplayHeadings/InfoDisplayHeadings'
 import './Events.css'
 
 const Events: React.FC = () => {
@@ -44,12 +44,12 @@ const Events: React.FC = () => {
   const sortEvents = (sortType: string) => {
     switch (sortType) {
       // sorts alphabetically based on the title of the event
-      case 'game':
-        setEvents([...events!].sort((a, b) => a.title.localeCompare(b.title)))
+      case 'main':
+        setEvents([...events!].sort((a, b) => a.event_title.localeCompare(b.event_title)))
         break;
       // sorts alphabetically based on the title of the event
-      case 'event':
-        setEvents([...events!].sort((a, b) => a.event_title.localeCompare(b.event_title)))
+      case 'sub':
+        setEvents([...events!].sort((a, b) => a.title.localeCompare(b.title)))
         break;
       // sorts based on which event started first
       case 'start':
@@ -74,8 +74,19 @@ const Events: React.FC = () => {
     <div className='events-wrapper'>
       <Header text='Events' />
       <div className='events'>
-      { events ? <EventDetails sortFunction={ sortEvents } /> : error ? <p>{ error }</p> : <Spinner /> }
-      { events ? events.map(event => <Event event={ event } key={event.id } />) : null }
+      { events ? <InfoDisplayHeadings
+                   sortFunction={ sortEvents } 
+                   mainTitle='Event'
+                   subTitle='Game' /> 
+               : error ? <p>{ error }</p> : <Spinner /> }
+      { events ? 
+                  events.map(event => 
+                                      <InfoDisplay 
+                                        mainTitle={event.event_title}
+                                        subTitle={event.title}
+                                        startDate={event.event_start_date}
+                                        endDate={event.event_end_date} />) 
+               : null }
       { events?.length === 0 ? <p>No ongoing events for selected games.</p> : null }
       </div>
     </div>

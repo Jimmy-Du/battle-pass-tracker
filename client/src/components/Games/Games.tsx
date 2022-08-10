@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import GameInterface from '../../interfaces/game.interface'
-import GameDetails from './gameDetails/GameDetails'
-import Game from './game/Game'
 import Spinner from '../common/spinner/Spinner'
-import './Games.css'
 import Header from '../common/header/Header'
+import InfoDisplay from '../infoDisplay/InfoDisplay'
+import InfoDisplayHeadings from '../infoDisplay/InfoDisplayHeadings/InfoDisplayHeadings'
+import './Games.css'
 
 const Games: React.FC = () => {
   const [games, setGames] = useState<GameInterface[]>()
@@ -45,11 +45,11 @@ const Games: React.FC = () => {
   const sortGames = (sortType: string) => {
     switch (sortType) {
       // sorts alphabetically based on the title of the game
-      case 'game':
+      case 'main':
         setGames([...games!].sort((a, b) => a.title.localeCompare(b.title)))
         break;
       // sorts alphabetically based on the title of the season
-      case 'season':
+      case 'sub':
         setGames([...games!].sort((a, b) => a.season_title.localeCompare(b.season_title)))
         break;
       // sorts based on which season started first
@@ -76,8 +76,19 @@ const Games: React.FC = () => {
     <div className='games-wrapper'>
       <Header text='Battle Passes' />
       <div className='games'>
-        { games ? <GameDetails sortFunction={ sortGames } /> : error ? <p>{ error }</p> : <Spinner /> }
-        { games ? games.map(game => <Game game={ game } key={ game.id } />) : null }
+        { games ? <InfoDisplayHeadings 
+                    sortFunction={ sortGames } 
+                    mainTitle='Game' 
+                    subTitle='Season' /> 
+                : error ? <p>{ error }</p> : <Spinner /> }
+        { games ? 
+                  games.map(game => 
+                                    <InfoDisplay 
+                                      mainTitle={game.title} 
+                                      subTitle={game.season_title} 
+                                      startDate={game.season_start_date}
+                                      endDate={game.season_end_date} />) 
+                : null }
       </div>
     </div>
   )

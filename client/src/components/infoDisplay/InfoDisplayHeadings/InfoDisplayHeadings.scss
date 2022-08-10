@@ -1,20 +1,20 @@
 @import '../../../styles/Variables.scss';
 
-.game-details {
+.info-display-headings {
   display: flex;
   justify-content: center;
   border: 1px solid $border-color;
   background-color: #fff;
 }
 
-.game-details span {
+.info-display-headings span {
   padding: 5px;
   flex-basis: 100%;
   color: $font-color;
   font-weight: bold;
 }
 
-.game-details span:hover {
+.info-display-headings span:hover {
   cursor: pointer;
 }
 
@@ -23,23 +23,23 @@
 }
 
 @media (max-width: 680px) {
-  .game-details {
+  .info-display-headings {
     font-size: $font-size-mobile;
   }
 
-  .start-detail {
+  .start-date-heading {
     display: none;
   }
 }
 
 @media (min-width: 2560px) {
-  .game-details {
+  .info-display-headings {
     font-size: $font-size-2k;
   }
 }
 
 @media (min-width: 3840px) {
-  .game-details {
+  .info-display-headings {
     font-size: $font-size-4k;
   }
 }

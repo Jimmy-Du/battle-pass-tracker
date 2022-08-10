@@ -19,6 +19,18 @@
   border-left: 1px solid $border-color;
 }
 
+.days-left-high {
+  background-color: $high-color;
+}
+
+.days-left-medium {
+  background-color: $medium-color;
+}
+
+.days-left-low {
+  background-color: $low-color;
+}
+
 @media (max-width: 680px) {
   .info-display {
     font-size: $font-size-mobile;

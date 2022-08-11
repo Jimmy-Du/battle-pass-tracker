@@ -46,16 +46,17 @@ const InfoDisplay: React.FC<InfoDisplayProps> = ({ mainTitle, subTitle, startDat
       </span>
       <span className='start-date'>
         <p>
-          { new Date(startDate).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' }) }
+          { new Date(startDate).toLocaleString('default', { month: 'short', day: '2-digit', year: 'numeric' }) }
         </p>
       </span>
       <span className='end-date'>
         <p>
-          { new Date(endDate).toLocaleString('default', { month: 'long', day: '2-digit', year: 'numeric' }) }
+          { new Date(endDate).toLocaleString('default', { month: 'short', day: '2-digit', year: 'numeric' }) }
         </p>
       </span>
-      <span className={ assignDaysLeftClass() }>
+      <span className={ 'days-left ' + assignDaysLeftClass() }>
         <p>{ daysLeft }</p>
+        <p className='days-left-label'>Days Left</p>
       </span>
     </div>
   )

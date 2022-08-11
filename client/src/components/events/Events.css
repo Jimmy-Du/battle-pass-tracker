@@ -29,6 +29,8 @@
 @media (max-width: 680px) {
   .events {
     width: 95%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 

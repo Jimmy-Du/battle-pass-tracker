@@ -1,0 +1,31 @@
+@import '../../../styles/Variables.scss';
+
+.info-display-sort-mobile {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .info-display-sort-mobile {
+    display: flex;
+    margin: 0px 0 15px 0;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-display-sort-mobile select {
+    width: 100%;
+    font-size: $font-size-mobile;
+    padding: 5px;
+    background-color: $action-color;
+    border: none;
+    border-radius: 15px;
+    color: white;
+  }
+
+  .info-display-sort-mobile fieldset {
+    width: 50%;
+    border-radius: 15px;
+    border-color: $border-color;
+  }
+}

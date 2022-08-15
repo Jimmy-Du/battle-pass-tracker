@@ -5,6 +5,7 @@ import Header from '../common/header/Header'
 import Spinner from '../common/spinner/Spinner'
 import InfoDisplay from '../infoDisplay/InfoDisplay'
 import InfoDisplayHeadings from '../infoDisplay/InfoDisplayHeadings/InfoDisplayHeadings'
+import InfoDisplaySortMobile from '../infoDisplay/InfoDisplayMobileSort/InfoDisplaySortMobile'
 import './Events.css'
 
 const Events: React.FC = () => {
@@ -79,6 +80,11 @@ const Events: React.FC = () => {
                    mainTitle='Event'
                    subTitle='Game' /> 
                : error ? <p>{ error }</p> : <Spinner /> }
+      {events ? <InfoDisplaySortMobile 
+                  sortFunction={ sortEvents }
+                  mainTitle='Event' 
+                  subTitle='Game' /> 
+               : null }
       { events ? 
                   events.map(event => 
                                       <InfoDisplay 

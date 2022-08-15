@@ -28,7 +28,7 @@
 
 .link {
   margin-left: 1rem;
-  color: #fde047;
+  color: white;
   text-decoration: none;
 }
 
@@ -38,7 +38,7 @@
 
 .active-link {
   margin-left: 1rem;
-  color: #fde047;
+  color: white;
   text-decoration: underline;
 }
 
@@ -55,7 +55,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.1em;
-  color: #fde047;
+  color: white;
 }
 
 @media (max-width: 800px) {

@@ -28,7 +28,7 @@ const Games: React.FC = () => {
 
     try {
       const response = await axios.post<GameInterface[]>(`${process.env.REACT_APP_BASE_API_URL}/games`, {games: selectedGames})
-      setGames(response.data.sort((a, b) => a.title.localeCompare(b.title)))
+      setGames(response.data.sort((a, b) => new Date(a.season_end_date).getTime() - new Date(b.season_end_date).getTime()))
     }
     catch (e: any) {
       setError('Something went wrong. Please try again.')

@@ -13,11 +13,11 @@ const InfoDisplaySortMobile: React.FC<InfoDisplaySortMobileProps> = ({ sortFunct
       <fieldset>
         <legend>Sort by:</legend>
           <select onChange={(e) => sortFunction(e.target.value)}>
+            <option value='end'>Days Left</option>
             <option value='main'>{ mainTitle }</option>
             <option value='sub'>{ subTitle }</option>
             <option value='start'>Start Date</option>
             <option value='end'>End Date</option>
-            <option value='end'>Days Left</option>
           </select>
       </fieldset>
     </div>

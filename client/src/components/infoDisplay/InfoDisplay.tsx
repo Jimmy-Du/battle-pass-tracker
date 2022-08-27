@@ -10,7 +10,7 @@ interface InfoDisplayProps {
 
 const InfoDisplay: React.FC<InfoDisplayProps> = ({ mainTitle, subTitle, startDate, endDate }) => {
   const daysLeftDifferenceInTime: number = new Date(endDate).getTime() - new Date().getTime()
-  const daysLeft: number = Math.ceil(daysLeftDifferenceInTime / (1000 * 3600 * 24))
+  const daysLeft: number = Number((daysLeftDifferenceInTime / (1000 * 3600 * 24)).toFixed(1))
 
   const totalDurationInTime: number = new Date(endDate).getTime() - new Date(startDate).getTime()
   const totalDuration: number = Math.ceil(totalDurationInTime / (1000 * 3600 * 24))

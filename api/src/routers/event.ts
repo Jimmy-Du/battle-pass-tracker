@@ -14,14 +14,14 @@ router.post('/events', async (req: Request, res: Response, next: NextFunction) =
     // if no array or an empty array is passed in the request body, all game events will be sent back
     if (req.body.games === undefined || req.body.games.length === 0) {
       const events: QueryResult = await pool.query("SELECT game_event.*, game.title FROM game_event " +
-                                                   "JOIN game ON game_event.game_id = game.id AND game_event.event_end_date > TIMESTAMP 'today'")
+                                                   "JOIN game ON game_event.game_id = game.id AND game_event.event_end_date > CURRENT_TIMESTAMP")
       res.status(200).send(events.rows)
     }
     // else, the specified games events in the array are sent back
     else {
       const events: QueryResult = await pool.query("SELECT game_event.*, game.title FROM game_event " + 
                                                     "JOIN game ON game_event.game_id = game.id " + 
-                                                    "WHERE game.id = ANY($1::int[]) AND game_event.event_end_date > TIMESTAMP 'today'", 
+                                                    "WHERE game.id = ANY($1::int[]) AND game_event.event_end_date > CURRENT_TIMESTAMP", 
                                                     [req.body.games])
       res.status(200).send(events.rows)
     }

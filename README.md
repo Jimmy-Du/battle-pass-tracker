@@ -16,4 +16,6 @@ Click [here](https://battlepasstracker.netlify.app/) for a live preview of the a
 - TypeScript
 
 ## Android
-For the android version/repository click [here.](https://github.com/Jimmy-Du/battle-pass-tracker-android)
+For the Android version/repository click [here.](https://github.com/Jimmy-Du/battle-pass-tracker-android)
+
+To download the Android version from Google Play click [here.](https://play.google.com/store/apps/details?id=com.jdu.battlepasstracker)

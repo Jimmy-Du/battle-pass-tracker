@@ -20,7 +20,7 @@ With more and more games adding battle passes and limited time in game events, i
     <img src='https://img.shields.io/badge/Express-eeeeee?style=for-the-badge&logo=Express&logoColor=000000' alt='Express'/>
   </li>
   <li>
-    <img src='https://img.shields.io/badge/Node.js-FFFFFF?style=for-the-badge&logo=Node.js&logoColor=339933' alt='Express'/>
+    <img src='https://img.shields.io/badge/Node.js-FFFFFF?style=for-the-badge&logo=Node.js&logoColor=339933' alt='Node.js'/>
   </li>
   <li>
     <img src='https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=PostgreSQL&logoColor=FFFFFF' alt='PostgreSQL'/>

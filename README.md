@@ -7,6 +7,7 @@
   ·
   <a href="https://github.com/Jimmy-Du/battle-pass-tracker/issues">Request Feature</a>
 </div>
+<p align='center'>Allow a couple of minutes for the application to fully wake up.</p>
 
 ## About The Project:
 With more and more games adding battle passes and limited time in game events, it can be overwhelming to keep up with all of them. Battle Pass Tracker is an Android, web, and Windows application that displays the dates of battle passes and in game events of various video games. The goal of this project is to allow users to have a central hub where they can view the dates of the battle passes and in game events, of the games that they play, so that they can prioritize battle passes and events that are the closest to expiring in order to obtain all rewards given out by the video games.

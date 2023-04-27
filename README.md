@@ -49,3 +49,10 @@ This repo is for the web version of Battle Pass Tracker. Click on the links belo
 </a>
 
 Google Play and the Google Play logo are trademarks of Google LLC.
+
+## Showcase
+Home:
+<img src="./images/homeScreen.PNG" alt="Home Screen"/>
+
+Events:
+<img src="./images/eventScreen.PNG" alt="Events Screen"/>

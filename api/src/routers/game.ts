@@ -13,12 +13,13 @@ router.post('/games', async (req: Request, res: Response, next: NextFunction) =>
   try {
     // if no array or an empty array is passed in the request body, all games will be sent back
     if (req.body.games === undefined || req.body.games.length === 0) {
-      const games: QueryResult = await pool.query("SELECT * FROM game")
+      const games: QueryResult = await pool.query("SELECT * FROM game WHERE season_title != ''")
       res.status(200).send(games.rows)
     }
     // else, the specified games in the array are sent back
     else {
-      const games: QueryResult = await pool.query("SELECT * FROM game WHERE id = ANY($1::int[])", [req.body.games])
+      const games: QueryResult = await pool.query(
+        "SELECT * FROM game WHERE id = ANY($1::int[]) AND season_title != ''", [req.body.games])
       res.status(200).send(games.rows)
     }
   }
@@ -34,7 +35,7 @@ router.post('/games', async (req: Request, res: Response, next: NextFunction) =>
 // Access:      Public
 router.get('/games', async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const games: QueryResult = await pool.query("SELECT id, title FROM game")
+    const games: QueryResult = await pool.query("SELECT id, title FROM game WHERE season_title != ''")
     res.status(200).send(games.rows)
   }
   catch {
